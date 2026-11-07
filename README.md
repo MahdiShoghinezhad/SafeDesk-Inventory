@@ -8,7 +8,7 @@
 
 **Designed and maintained by [Mahdi Shoghinezhad](https://github.com/MahdiShoghinezhad).**
 
-> **Project status: portfolio prototype — Windows execution has not yet been independently verified.** I distinguish implemented features from tested behavior below. Sample data in this repository is synthetic, not evidence of anyone's installed wallets.
+> **Project status: portfolio prototype — Windows CI build, core smoke checks, and publish passed; manual GUI acceptance remains outstanding.** I distinguish implemented features from tested behavior below. Sample data in this repository is synthetic, not evidence of anyone's installed wallets.
 
 ## Why I built it
 
@@ -119,7 +119,8 @@ For the exact trust boundary, review [SECURITY.md](SECURITY.md) and [architectur
 - [x] Chromium package-presence observation (Chrome / Edge / Brave)
 - [x] Local opt-in CSV export and dependency-free core checks
 - [x] Windows CI workflow definition
-- [ ] Verified passing Windows CI run and manual GUI acceptance test
+- [x] Verified passing Windows CI build, core smoke checks and self-contained publish ([run #1](https://github.com/MahdiShoghinezhad/SafeDesk-Inventory/actions/runs/42391699676))
+- [ ] Manual GUI acceptance test on Windows 10/11
 - [ ] Additional automated Windows adapter tests with controlled fixtures
 - [ ] Verified publisher identity and more robust installation-source handling
 - [ ] Accessibility and screen-reader review
