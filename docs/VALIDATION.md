@@ -35,7 +35,8 @@ dotnet run --project .\tests\SafeDeskInventory.Tests\SafeDeskInventory.Tests.csp
 - [x] A supplied GUI screenshot shows synthetic demo labeling and four displayed records (does not independently establish that no previous live scan occurred).
 - [ ] Live scan requires a Yes/No confirmation each time.
 - [ ] Declining consent leaves current results intact.
-- [ ] A clean machine or profile with no matching applications shows zero results without an error.
+- [x] An actual user-initiated scan displayed zero matching observations and no access warnings on the Windows test machine (2026-11-07). This does not establish which supported packages were installed or prove detection accuracy.
+- [ ] A controlled clean machine or profile with no matching applications shows zero results without an error.
 - [ ] Filtering works for names, browsers and profile labels.
 - [x] User-provided CSV demonstrates successful export of all four demo observations.
 - [ ] Confirm filtered-view CSV export and user-selected destination through a separate manual test.
@@ -55,5 +56,6 @@ I will use the word **verified** only when the relevant checkboxes above are com
 | 2026-11-07 | Source-only preparation environment (no .NET SDK available) | Static source/XML review | Initial repository package |
 | 2026-11-07 | GitHub Actions / windows-latest | Release build, core smoke checks, self-contained publish: PASS | [CI run #2](https://github.com/MahdiShoghinezhad/SafeDesk-Inventory/actions/runs/42391911145) |
 | 2026-11-07 | User-provided Windows screenshot and exported CSV | WPF demo visibly launched; four synthetic records exported | [Checked-in sanitized demo CSV](../examples/safedesk-demo.inventory.csv); screenshot retained by owner, not yet published |
-| Pending | Consent-based Windows test computer | Registry and extension discovery, permission failures, filtered exports, GUI interactions | Full manual acceptance checklist above |
+| 2026-11-07 | User-provided Windows screenshot, live local scan | Inventory: 0 observations; 0 desktop apps; 0 browser extensions; status: `Scan finished ... No access warnings`. This verifies an empty-state live scan UI, not positive detection recall. | Screenshot retained by owner (not published) |
+| Pending | Controlled Windows test with an intentionally installed allowlisted app and wallet extension | Positive detection, unsupported paths, permission failures, filtered exports and remaining GUI interactions | Full manual acceptance checklist above |
 
