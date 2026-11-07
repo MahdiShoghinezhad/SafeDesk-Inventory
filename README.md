@@ -96,6 +96,16 @@ dotnet publish .\src\SafeDeskInventory.App\SafeDeskInventory.App.csproj -c Relea
 
 See [validation checklist](docs/VALIDATION.md). **CI compilation is not the same as a verified interactive Windows run.** I will not label the binary production-tested before that checklist is completed.
 
+## Evidence and demo artifacts
+
+On November 7, 2026, the [Windows CI workflow](https://github.com/MahdiShoghinezhad/SafeDesk-Inventory/actions/runs/42391911145) completed successfully: Release build, core smoke checks and self-contained Windows publish. I also reviewed a Windows application screenshot of the four-record **synthetic demo** (two desktop applications and two browser extensions), along with the four-row CSV exported from that demo.
+
+- [Reproducible synthetic CSV example](examples/safedesk-demo.inventory.csv)
+- [Validation and remaining manual test checklist](docs/VALIDATION.md)
+- **Still outstanding:** a documented live-inventory scan on a consented Windows test device, broader compatibility testing, and formal GUI acceptance.
+
+These checks demonstrate a working prototype and an export workflow, **not** complete coverage of installed wallets or production readiness.
+
 ## Example report (synthetic)
 
 ```csv
